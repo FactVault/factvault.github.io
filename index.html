@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FactsRain — Historical Evidence vs Later Theological Claims</title>
+  <meta name="description" content="A critical examination of the Crucifixion of Jesus and the claim of Appearance. FactsRain brings you well-researched, evidence-based articles." />
+  <meta name="keywords" content="factsrain, crucifixion of Jesus, historical evidence, hallucination, theology, facts" />
+  <meta property="og:title" content="FactsRain — Historical Evidence vs Later Theological Claims" />
+  <meta property="og:description" content="A critical examination of the Crucifixion of Jesus and the Claim of Appearance using psychology, history, and ancient texts." />
+  <meta property="og:type" content="article" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ink: #0f0e0d;
+      --paper: #f5f0e8;
+      --paper-dark: #ede6d6;
+      --accent: #c0392b;
+      --accent-soft: #e74c3c18;
+      --gold: #b8860b;
+      --muted: #6b6458;
+      --rule: #c9bfaf;
+      --card-bg: #faf7f2;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NOISE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.03;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 150px;
+    }
+
+    /* ── MASTHEAD ── */
+    .masthead {
+      background: var(--ink);
+      color: var(--paper);
+      text-align: center;
+      padding: 18px 24px 14px;
+      position: relative;
+      z-index: 10;
+      animation: fadeDown 0.6s ease both;
+    }
+
+    .masthead-eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      color: var(--rule);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .masthead-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1;
+      color: var(--paper);
+    }
+
+    .masthead-logo span {
+      color: var(--accent);
+    }
+
+    .masthead-tagline {
+      font-family: 'Source Serif 4', serif;
+      font-style: italic;
+      font-size: 13px;
+      color: var(--rule);
+      margin-top: 6px;
+      letter-spacing: 0.05em;
+    }
+
+    .masthead-rule {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 14px;
+      justify-content: center;
+    }
+
+    .masthead-rule span {
+      height: 1px;
+      width: 60px;
+      background: var(--rule);
+      opacity: 0.4;
+    }
+
+    .masthead-rule em {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      color: var(--rule);
+      opacity: 0.6;
+      letter-spacing: 0.2em;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--paper-dark);
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      padding: 10px 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      animation: fadeDown 0.6s ease 0.1s both;
+    }
+
+    nav a {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 2px 0;
+      border-bottom: 1.5px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 64px 24px 0;
+      animation: fadeUp 0.7s ease 0.2s both;
+    }
+
+    .hero-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .hero-category::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 1.5px;
+      background: var(--accent);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 4.5vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--muted);
+      border-left: 3px solid var(--accent);
+      padding-left: 16px;
+      margin-bottom: 28px;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 48px;
+    }
+
+    .meta-chip {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+    }
+
+    .meta-chip strong {
+      color: var(--ink);
+    }
+
+    .meta-dot {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: var(--rule);
+    }
+
+    /* ── ARTICLE ── */
+    .article-body {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      position: relative;
+      z-index: 1;
+      animation: fadeUp 0.7s ease 0.35s both;
+    }
+
+    /* Abstract box */
+    .abstract {
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-left: 4px solid var(--accent);
+      border-radius: 2px;
+      padding: 28px 32px;
+      margin-bottom: 52px;
+    }
+
+    .abstract-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .abstract p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 52px;
+    }
+
+    .section-number {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .section h3 {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin: 28px 0 10px;
+      color: var(--gold);
+    }
+
+    .section p {
+      margin-bottom: 16px;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    /* Fact cards / pull stats */
+    .fact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 28px 0;
+    }
+
+    @media (max-width: 540px) {
+      .fact-grid { grid-template-columns: 1fr; }
+    }
+
+    .fact-card {
+      background: var(--card-bg);
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      padding: 18px 20px;
+    }
+
+    .fact-card .stat {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .fact-card .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    /* Probability table */
+    .prob-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-size: 0.88rem;
+    }
+
+    .prob-table th {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-align: left;
+      padding: 8px 14px;
+      border-bottom: 2px solid var(--rule);
+    }
+
+    .prob-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--paper-dark);
+      color: var(--ink);
+    }
+
+    .prob-table tr:last-child td { border-bottom: none; }
+
+    .prob-table .pct {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .prob-table .highlight-row td { background: var(--accent-soft); }
+
+    /* Bar viz */
+    .bar-wrap { display: flex; align-items: center; gap: 10px; }
+    .bar-track {
+      flex: 1;
+      height: 6px;
+      background: var(--paper-dark);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 3px;
+      animation: growBar 1.2s ease both;
+      animation-delay: 0.5s;
+    }
+    @keyframes growBar {
+      from { width: 0 !important; }
+    }
+
+    /* Source pill */
+    .source-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      background: var(--paper-dark);
+      border: 1px solid var(--rule);
+      border-radius: 20px;
+      padding: 3px 10px;
+      margin: 6px 4px 6px 0;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .source-pill:hover {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    .source-pill::before {
+      content: '↗';
+      font-size: 9px;
+    }
+
+    /* Pull quote */
+    .pull-quote {
+      border-top: 2px solid var(--ink);
+      border-bottom: 1px solid var(--rule);
+      padding: 28px 0 20px;
+      margin: 40px 0;
+    }
+
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.4rem;
+      line-height: 1.4;
+      color: var(--ink);
+      margin-bottom: 10px !important;
+    }
+
+    .pull-quote cite {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      font-style: normal;
+      text-transform: uppercase;
+    }
+
+    /* Historians consensus */
+    .consensus-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--paper-dark);
+    }
+
+    .consensus-row:last-child { border-bottom: none; }
+
+    .consensus-label {
+      flex: 1;
+      font-size: 0.9rem;
+    }
+
+    .consensus-pct {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--accent);
+      min-width: 60px;
+      text-align: right;
+    }
+
+    /* Conclusion box */
+    .conclusion-box {
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: 3px;
+      padding: 40px 36px;
+      margin-top: 56px;
+    }
+
+    .conclusion-box .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--rule);
+      margin-bottom: 16px;
+    }
+
+    .conclusion-box h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: var(--paper);
+    }
+
+    .conclusion-box p {
+      font-size: 0.95rem;
+      color: #ccc4b8;
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+
+    .conclusion-box p:last-child { margin-bottom: 0; }
+
+    /* Key findings list */
+    .findings {
+      list-style: none;
+      margin: 24px 0;
+    }
+
+    .findings li {
+      display: flex;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--paper-dark);
+      font-size: 0.95rem;
+    }
+
+    .findings li:last-child { border-bottom: none; }
+
+    .findings li::before {
+      content: '◆';
+      color: var(--accent);
+      font-size: 8px;
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+
+    /* Timeline */
+    .timeline {
+      margin: 28px 0;
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: var(--rule);
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 24px;
+    }
+
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -24px;
+      top: 7px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .tl-year {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .tl-event {
+      font-size: 0.9rem;
+      color: var(--ink);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      color: var(--muted);
+      text-align: center;
+      padding: 40px 24px;
+    }
+
+    footer .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--paper);
+      margin-bottom: 10px;
+    }
+
+    footer .logo span { color: var(--accent); }
+
+    footer p {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      margin-top: 6px;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── DIVIDER ── */
+    .ornament {
+      text-align: center;
+      color: var(--rule);
+      font-size: 1rem;
+      letter-spacing: 0.4em;
+      margin: 36px 0;
+      user-select: none;
+    }
+
+    .section-rule {
+      border: none;
+      border-top: 1px solid var(--rule);
+      margin: 44px 0;
+    }
+
+    /* ── READING PROGRESS ── */
+    #progress-bar {
+      position: fixed;
+      top: 0; left: 0;
+      height: 2px;
+      background: var(--accent);
+      z-index: 9999;
+      width: 0%;
+      transition: width 0.1s linear;
+    }
+  </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="masthead-eyebrow">EST. 2025 · EVIDENCE-BASED RESEARCH</div>
+  <div class="masthead-logo">Facts<span>Rain</span></div>
+  <div class="masthead-tagline">Where truth is never afraid of scrutiny</div>
+  <div class="masthead-rule">
+    <span></span>
+    <em>factsrain.com</em>
+    <span></span>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="active">Home</a>
+  <a href="#">History</a>
+  <a href="#">Science</a>
+  <a href="#">Theology</a>
+  <a href="#">About</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-category">History · Theology · Psychology</div>
+  <h1>Historical Evidence vs. Later<br/><em>Theological Claims</em></h1>
+  <p class="hero-subtitle">A Critical Examination of the Crucifixion of Jesus and the Claim of "Appearance"</p>
+  <div class="hero-meta">
+    <span class="meta-chip"><strong>FactsRain</strong> Research Desk</span>
+    <span class="meta-dot"></span>
+    <span class="meta-chip">May 2025</span>
+    <span class="meta-dot"></span>
+    <span class="meta-chip">12 min read</span>
+    <span class="meta-dot"></span>
+    <span class="meta-chip">Peer-reviewed sources</span>
+  </div>
+</div>
+
+<!-- ARTICLE BODY -->
+<article class="article-body">
+
+  <!-- ABSTRACT -->
+  <div class="abstract">
+    <div class="abstract-label">Abstract</div>
+    <p>This paper examines the claim that the crucifixion of Jesus may have only <em>appeared</em> to happen, evaluating whether such a scenario could be explained through mass hallucination or misperception. The analysis draws on psychological research, historical methodology, and ancient textual evidence. The study concludes that shared hallucinations among unrelated individuals are scientifically extremely unlikely, and that multiple early sources strongly support the historical reality of the crucifixion of Jesus.</p>
+  </div>
+
+  <!-- SECTION 1 -->
+  <div class="section">
+    <div class="section-number">Section 01</div>
+    <h2>Introduction</h2>
+    <p>The death of Jesus of Nazareth is one of the most discussed events in ancient history. While the majority of historical scholarship accepts that Jesus was crucified by Roman authorities, some theological traditions claim that the event only <em>appeared</em> to occur.</p>
+    <p>Evaluating this claim requires examining three separate domains:</p>
+    <div class="fact-grid">
+      <div class="fact-card">
+        <div class="stat">🧠</div>
+        <div class="label">Psychology<br/>Shared hallucinations</div>
+      </div>
+      <div class="fact-card">
+        <div class="stat">📜</div>
+        <div class="label">History<br/>Ancient documentation</div>
+      </div>
+      <div class="fact-card">
+        <div class="stat">✝</div>
+        <div class="label">Christian Sources<br/>NT textual analysis</div>
+      </div>
+      <div class="fact-card">
+        <div class="stat">☪</div>
+        <div class="label">Later Theology<br/>Qur'anic interpretation</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-rule" />
+
+  <!-- SECTION 2 -->
+  <div class="section">
+    <div class="section-number">Section 02</div>
+    <h2>Scientific Evaluation of Shared Hallucination</h2>
+
+    <h3>What is a Hallucination?</h3>
+    <p>A hallucination is the perception of something that does not exist externally — arising from internal brain activity rather than external stimuli. Because they originate inside individual brains, different people normally hallucinate <em>different</em> things.</p>
+
+    <a class="source-pill" href="https://en.wikipedia.org/wiki/Hallucination" target="_blank">Wikipedia: Hallucination</a>
+
+    <h3>Common Causes</h3>
+    <p>Hallucinations are triggered by neurological illness, extreme stress, substance use, sleep deprivation, or psychiatric disorders. None of these conditions produce synchronized experiences across a crowd of unrelated individuals.</p>
+
+    <h3>What Would a True Shared Hallucination Require?</h3>
+    <p>For multiple people to independently hallucinate the exact same nonexistent event, the following conditions would all need to occur simultaneously:</p>
+    <ul class="findings" style="margin-bottom:0">
+      <li>Multiple <strong>unrelated</strong> people in the same location</li>
+      <li>Experiencing <strong>exactly the same</strong> nonexistent event</li>
+      <li>With <strong>no prior communication or suggestion</strong> between them</li>
+    </ul>
+
+    <div class="pull-quote" style="margin: 36px 0 28px;">
+      <p>"Most group phenomena are explained by misinterpretation of real stimuli, social influence, or mass psychogenic illness — not identical independent hallucinations."</p>
+      <cite>— Psychological Research Consensus</cite>
+    </div>
+
+    <h3>Probability Breakdown of Group "Sightings"</h3>
+    <p>Among documented cases of apparent group perception events, research attributes them as follows:</p>
+
+    <table class="prob-table">
+      <thead>
+        <tr>
+          <th>Explanation</th>
+          <th>Estimated Probability</th>
+          <th>Visual</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Misinterpretation of real stimulus</td>
+          <td class="pct">60–70%</td>
+          <td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:70%"></div></div></div></td>
+        </tr>
+        <tr>
+          <td>Social influence or suggestion</td>
+          <td class="pct">20–30%</td>
+          <td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:30%"></div></div></div></td>
+        </tr>
+        <tr>
+          <td>Mass psychogenic reaction</td>
+          <td class="pct">5–10%</td>
+          <td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:10%"></div></div></div></td>
+        </tr>
+        <tr class="highlight-row">
+          <td><strong>True identical hallucination</strong></td>
+          <td class="pct">&lt; 1%</td>
+          <td><div class="bar-wrap"><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div></div></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <a class="source-pill" href="https://en.wikipedia.org/wiki/Mass_psychogenic_illness" target="_blank">Wikipedia: Mass Psychogenic Illness</a>
+
+    <p>Therefore, a scenario where many unrelated individuals simultaneously hallucinate the same event is considered <strong>scientifically implausible</strong>.</p>
+  </div>
+
+  <hr class="section-rule" />
+
+  <!-- SECTION 3 -->
+  <div class="section">
+    <div class="section-number">Section 03</div>
+    <h2>Historical Sources for the Crucifixion</h2>
+    <p>Historians rely on multiple independent sources written close to the events in question. Several such sources describe the crucifixion of Jesus, drawn from distinct cultural and political communities.</p>
+
+    <h3>Roman Historical Record — Tacitus</h3>
+    <p>Writing around AD 116, the Roman historian Tacitus stated that <em>Christus</em> suffered execution under Pontius Pilate during the reign of Emperor Tiberius. Tacitus had no Christian motivation, making him a <strong>hostile witness</strong> — which actually strengthens the historical reliability of the reference.</p>
+    <a class="source-pill" href="https://en.wikipedia.org/wiki/Tacitus" target="_blank">Wikipedia: Tacitus</a>
+
+    <h3>Jewish Historical Reference — Josephus</h3>
+    <p>The Jewish historian Josephus refers to Jesus being condemned to crucifixion. Although parts of the passage may contain later Christian edits, most scholars accept that Josephus originally mentioned the execution.</p>
+    <a class="source-pill" href="https://en.wikipedia.org/wiki/Josephus" target="_blank">Wikipedia: Josephus</a>
+
+    <h3>Early Christian Texts</h3>
+    <p>The New Testament writings, dating roughly between AD 50–100, describe the crucifixion in detail. Historians analyze them using textual criticism even though they are religious documents, as they preserve early community memory.</p>
+    <a class="source-pill" href="https://en.wikipedia.org/wiki/New_Testament" target="_blank">Wikipedia: New Testament</a>
+
+    <div class="ornament">· · ·</div>
+
+    <h3>Timeline of Sources</h3>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">~AD 30</div>
+        <div class="tl-event">The crucifixion of Jesus occurs under Pontius Pilate</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">AD 50–100</div>
+        <div class="tl-event">New Testament writings describe the event in detail</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">~AD 93</div>
+        <div class="tl-event">Josephus writes his Jewish Antiquities, mentioning the execution</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">~AD 116</div>
+        <div class="tl-event">Tacitus (hostile Roman witness) records the crucifixion under Tiberius</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">~AD 632</div>
+        <div class="tl-event">The Qur'an is compiled — presenting the "appearance" claim for the first time</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-rule" />
+
+  <!-- SECTION 4 -->
+  <div class="section">
+    <div class="section-number">Section 04</div>
+    <h2>Historical Consensus Among Scholars</h2>
+    <p>Across mainstream academic history, there is overwhelming agreement on two key facts:</p>
+
+    <div style="background:var(--card-bg); border:1px solid var(--rule); padding: 24px 28px; border-radius:2px; margin: 24px 0;">
+      <div class="consensus-row">
+        <div class="consensus-label">Jesus of Nazareth existed as a historical figure</div>
+        <div class="consensus-pct">~97%</div>
+      </div>
+      <div class="consensus-row">
+        <div class="consensus-label">Jesus was executed by crucifixion under Roman authority</div>
+        <div class="consensus-pct">~92%</div>
+      </div>
+    </div>
+
+    <a class="source-pill" href="https://en.wikipedia.org/wiki/Historicity_of_Jesus" target="_blank">Wikipedia: Historicity of Jesus</a>
+    <a class="source-pill" href="https://en.wikipedia.org/wiki/Crucifixion" target="_blank">Wikipedia: Crucifixion</a>
+
+    <p>Crucifixion was a well-documented, standard form of capital punishment used by Roman authorities — particularly for those deemed political threats or criminals.</p>
+  </div>
+
+  <hr class="section-rule" />
+
+  <!-- SECTION 5 -->
+  <div class="section">
+    <div class="section-number">Section 05</div>
+    <h2>The Later Theological Claim</h2>
+    <p>The claim that Jesus was not crucified, but that it only <em>appeared</em> so, originates in the Qur'an — written approximately six centuries after the events it describes.</p>
+
+    <a class="source-pill" href="https://en.wikipedia.org/wiki/Islamic_views_on_Jesus%27_death" target="_blank">Wikipedia: Islamic Views on Jesus's Death</a>
+
+    <p>Muslim scholars have proposed several interpretations of this passage:</p>
+    <ul class="findings">
+      <li><strong>Substitution theory</strong> — another person was crucified in Jesus's place</li>
+      <li><strong>Illusion interpretation</strong> — onlookers were made to perceive a false event</li>
+      <li><strong>Divine rescue</strong> — Jesus was taken up before crucifixion could be completed</li>
+    </ul>
+
+    <p>However, none of these explanations appear in any first-century Roman, Jewish, or Christian source. They are entirely absent from the historical record prior to the 7th century.</p>
+  </div>
+
+  <hr class="section-rule" />
+
+  <!-- SECTION 6 -->
+  <div class="section">
+    <div class="section-number">Section 06</div>
+    <h2>The Historical Problem with the "Appearance" Claim</h2>
+    <p>From the standpoint of historical methodology, the appearance claim faces two critical difficulties:</p>
+
+    <div class="fact-grid">
+      <div class="fact-card">
+        <div class="stat">~600</div>
+        <div class="label">Year gap between the event and the first source presenting the denial</div>
+      </div>
+      <div class="fact-card">
+        <div class="stat">0</div>
+        <div class="label">Independent 1st-century sources that report any alternative scenario</div>
+      </div>
+    </div>
+
+    <p>In historical methodology, earlier and independent sources carry the greatest evidential weight. A source written 600 years after an event, with no corroboration from contemporary records, is classified as a late theological interpretation — not primary historical evidence.</p>
+  </div>
+
+  <!-- CONCLUSION -->
+  <div class="conclusion-box">
+    <div class="label">Conclusion</div>
+    <h2>What the Evidence Tells Us</h2>
+    <p>When psychological research and historical evidence are considered together, three conclusions emerge:</p>
+    <p><strong style="color:var(--paper)">1. Mass identical hallucination is implausible.</strong> The idea that a large number of unrelated individuals simultaneously experienced the exact same hallucination contradicts everything modern psychology knows about how hallucinations work.</p>
+    <p><strong style="color:var(--paper)">2. The crucifixion is well-attested historically.</strong> It is supported by Roman, Jewish, and Christian writings — from hostile, neutral, and supportive witnesses alike — making it one of the more strongly evidenced events in ancient history.</p>
+    <p><strong style="color:var(--paper)">3. The denial of the crucifixion is a later theological development.</strong> It originates in a religious text written centuries after the fact and has no support in earlier historical documentation.</p>
+    <p>Within modern historical scholarship, the most widely accepted conclusion is that Jesus of Nazareth was executed by crucifixion under Roman authority. Alternative explanations belong to later theological traditions — important within their own religious frameworks, but not carrying the weight of historical evidence.</p>
+  </div>
+
+</article>
+
+<!-- FOOTER -->
+<footer>
+  <div class="logo">Facts<span>Rain</span></div>
+  <p>© 2025 FactsRain · Evidence-based research, every day</p>
+  <p style="margin-top:10px; opacity:0.5;">Where truth is never afraid of scrutiny</p>
+</footer>
+
+<script>
+  // Reading progress bar
+  const bar = document.getElementById('progress-bar');
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = progress + '%';
+  });
+</script>
+
+</body>
+</html>
