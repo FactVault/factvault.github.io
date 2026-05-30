@@ -37,7 +37,7 @@
     .masthead-rule em { font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--rule); opacity: 0.6; letter-spacing: 0.2em; }
 
     /* NAV */
-    nav { background: var(--paper-dark); border-bottom: 2px solid var(--rule); display: flex; justify-content: center; gap: 0; padding: 0 24px; position: sticky; top: 0; z-index: 100; overflow-x: auto; }
+    nav { background: var(--paper-dark); border-bottom: none; display: flex; justify-content: center; gap: 0; padding: 0 24px; position: sticky; top: 0; z-index: 100; overflow-x: auto; }
     nav a { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); text-decoration: none; padding: 12px 16px; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: color 0.2s, border-color 0.2s; white-space: nowrap; cursor: pointer; display: inline-block; }
     nav a:hover { color: #c0392b; } nav a.active { color: #c0392b; border-bottom-color: #c0392b; } nav a { border-bottom: 2px solid transparent; }
 
@@ -78,9 +78,9 @@
 
     /* PROB TABLE */
     .prob-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.88rem; }
-    .prob-table th { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); text-align: left; padding: 8px 14px; border-bottom: 2px solid var(--rule); }
+    .prob-table th { font-family: 'JetBrains Mono', monospace; font-size: 9px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); text-align: left; padding: 8px 14px; border-bottom: 1px solid var(--rule); }
     .prob-table td { padding: 10px 14px; border-bottom: 1px solid var(--paper-dark); color: var(--ink); }
-    .prob-table tr:last-child td { border-bottom: none; }
+    .prob-table tr:last-child td { border-bottom: 1px solid var(--rule); }
     .prob-table .pct { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 500; color: #c0392b; }
     .prob-table .highlight-row td { background: #e74c3c18; }
     .bar-wrap { display: flex; align-items: center; gap: 10px; }
@@ -99,7 +99,7 @@
 
     /* CONSENSUS */
     .consensus-row { display: flex; align-items: center; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--paper-dark); }
-    .consensus-row:last-child { border-bottom: none; }
+    .consensus-row:last-child { border-bottom: 1px solid var(--rule); }
     .consensus-label { flex: 1; font-size: 0.9rem; }
     .consensus-pct { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; color: #c0392b; min-width: 60px; text-align: right; }
 
@@ -113,7 +113,7 @@
     /* FINDINGS */
     .findings { list-style: none; margin: 24px 0; }
     .findings li { display: flex; gap: 14px; padding: 10px 0; border-bottom: 1px solid var(--paper-dark); font-size: 0.95rem; }
-    .findings li:last-child { border-bottom: none; }
+    .findings li:last-child { border-bottom: 1px solid var(--rule); }
     .findings li::before { content: '◆'; color: #c0392b; font-size: 8px; flex-shrink: 0; margin-top: 7px; }
 
     /* TIMELINE */
